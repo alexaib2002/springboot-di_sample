@@ -1,6 +1,8 @@
 package org.alexaib.springlearn.springbootdi.app.services;
 
-//@Service
+import org.springframework.stereotype.Component;
+
+@Component
 public class SampleService {
 
     public String operation() {

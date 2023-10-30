@@ -1,6 +1,7 @@
 package org.alexaib.springlearn.springbootdi.app.controllers;
 
 import org.alexaib.springlearn.springbootdi.app.services.SampleService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,8 +9,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class IndexController {
 
-    // Coupled attribute
-    private SampleService service = new SampleService();
+    // Searches an object of the same type inside the Spring container
+    @Autowired
+    private SampleService service;
 
     @GetMapping({"/", "", "/index"})
     public String index(Model model) {
