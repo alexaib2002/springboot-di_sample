@@ -1,7 +1,9 @@
 package org.alexaib.springlearn.springbootdi.app.services;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
+@Primary
 @Component("successOperation")
 public class SampleService implements IServiceProvider {
 
