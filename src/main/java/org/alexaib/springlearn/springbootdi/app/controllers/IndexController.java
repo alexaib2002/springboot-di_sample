@@ -10,9 +10,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class IndexController {
 
+    private IServiceProvider service;
+
     // Searches an object of the same type inside the Spring container
     @Autowired
-    private IServiceProvider service;
+    public void setService(IServiceProvider service) {
+        this.service = service;
+    }
 
     @GetMapping({"/", "", "/index"})
     public String index(Model model) {
