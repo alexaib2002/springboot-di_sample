@@ -2,7 +2,7 @@ package org.alexaib.springlearn.springbootdi.app.services;
 
 import org.springframework.stereotype.Component;
 
-@Component("failOperation")
+@Component("failService")
 public class FailService implements IServiceProvider {
 
     @Override
