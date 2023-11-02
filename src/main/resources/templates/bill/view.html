@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring dependency injection example</title>
+</head>
+<body>
+<h1>Spring dependency injection example</h1>
+<h3 th:text="${bill.description()}"></h3>
+<div>Customer: <span th:text="${bill.customer().name()} + ' ' + ${bill.customer().surname()}"></span></div>
+<table>
+    <thead>
+    <tr>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="item: ${bill.items()}">
+        <td th:text="${item.product().name()}"></td>
+        <td th:text="${item.product().price()}"></td>
+        <td th:text="${item.quantity()}"></td>
+        <td th:text="${item.product().price() * item.quantity()}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

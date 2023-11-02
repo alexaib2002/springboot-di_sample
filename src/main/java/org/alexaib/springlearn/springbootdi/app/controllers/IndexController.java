@@ -14,7 +14,7 @@ public class IndexController {
 
     // Searches an object of the same type inside the Spring container
     @Autowired
-    @Qualifier("failOperation")
+    @Qualifier("failService")
     public void setService(IServiceProvider service) {
         this.service = service;
     }
